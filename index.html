@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="modernizr-custom.js"></script>
+
+	<style>
+		.no-svg #svg-div {
+			display: none;
+		}
+
+		.no-svg #vitas {
+			display: block;
+		}
+
+		.svg #vitas {
+			display: none;
+
+		}
+
+		.svg #svg-div {
+			display: block;
+		}
+
+		#sky {
+			animation: sky 40s;
+		}
+
+		@keyframes sky {
+			from {
+				fill: skyblue;
+			}
+			50% {
+				fill: black;
+			}
+			to {
+				fill: skyblue;
+			}
+		}
+
+		.window {
+			animation: windows 40s;
+		}
+
+		.window2 {
+			animation: windows 40s;
+			animation-delay: 1s;
+		}
+
+		.window3 {
+			animation: windows 40s;
+			animation-delay: 2s;
+		}
+
+		.window4 {
+			animation: windows 40s;
+			animation-delay: 3s;
+		}
+
+		.window5 {
+			animation: windows 40s;
+			animation-delay: 4s;
+		}
+
+		.window6 {
+			animation: windows 40s;
+			animation-delay: 3s;
+		}
+
+		.window7 {
+			animation: windows 40s;
+			animation-delay: 4s;
+		}
+
+		.window8 {
+			animation: windows 40s;
+			animation-delay: 5s;
+		}
+
+		.window9 {
+			animation: windows 40s;
+			animation-delay: 5s;
+		}
+
+		.window10 {
+			animation: windows 40s;
+			animation-delay: 2s;
+		}
+
+		@keyframes windows {
+			from {
+				fill: lightblue;
+			}
+			20% {
+				fill: lightblue;
+			}
+			21% {
+				fill: yellow;
+			}
+			50% {
+				fill: yellow;
+			}
+			51% {
+				fill: black;
+			}
+			85% {
+				fill: silver;
+			}
+			to {
+				fill: lightblue;
+			}
+		}
+
+
+		#heart:hover {
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 15s linear forwards;
+		}
+
+		@keyframes dash {
+			30% {
+				stroke: #00b4fb;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill: #001a41;
+				stroke: #00b4fb;
+			}
+		}
+
+		#cloud {
+
+			animation: cloud 10s;
+			animation-iteration-count: 5;
+		}
+
+		@keyframes cloud {
+			from {
+				transform: translateX(-200px);
+			}
+			to {
+				transform: translateX(800px);
+			}
+		}
+
+		button {
+			background-color: none;
+			border: 2px solid #006686;
+			border-radius: 5px;
+			color: black;
+			padding: 5px;
+			margin: 15px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<button type="button" id="crash">Кнопка, чтобы всё сломать</button> и которая сейчас не работает<br/>
+	<div id="svg-div"><svg width="600" height="450">
+	<rect id="sky" width="100%" height="400" fill="skyblue"/>
+	<rect width="100%" height="50" y="400" fill="#006686"/>
+	<polyline points="0,400 0,300 75,300 75,400 75, 340 165,340 165,400 165,310 240,310 240,400 240,250 340,250 340,400 340,320 400,320 400,400 400,290 500,290 500,400	525,400 525,340 600,340 600,400" fill="#007799" stroke="#006686" stroke-width="15" stroke-linejoin="round"/>
+	<rect class="window" width="20" height="50" fill="lightblue" x="10" y="330"/>
+	<rect class="window2" width="20" height="50" fill="lightblue" x="45" y="310"/>
+	<rect class="window3" width="20" height="40" fill="lightblue" x="85" y="355"/>
+	<rect class="window4" width="40" height="25" fill="lightblue" x="120" y="360"/>
+	<rect class="window5" width="50" height="75" fill="lightblue" x="178" y="320"/>
+	<rect class="window6" width="10" height="20" fill="lightblue" x="255" y="270"/>
+	<rect class="window7" width="10" height="20" fill="lightblue" x="285" y="270"/>
+	<rect class="window8" width="10" height="20" fill="lightblue" x="315" y="270"/>
+	<rect class="window6" width="10" height="20" fill="lightblue" x="255" y="310"/>
+	<rect class="window7" width="10" height="20" fill="lightblue" x="285" y="310"/>
+	<rect class="window8" width="10" height="20" fill="lightblue" x="315" y="310"/>
+	<rect class="window6" width="10" height="20" fill="lightblue" x="255" y="350"/>
+	<rect class="window7" width="10" height="20" fill="lightblue" x="285" y="350"/>
+	<rect class="window8" width="10" height="20" fill="lightblue" x="315" y="350"/>
+	<rect class="window9" width="7" height="20" fill="lightblue" x="369" y="370"/>
+	<rect class="window9" width="7" height="20" fill="lightblue" x="380" y="370"/>
+	<rect class="window10" width="20" height="50" fill="lightblue" x="420" y="310"/>
+	<rect class="window10" width="20" height="50" fill="lightblue" x="460" y="330"/>
+	<text x="540" y="345" fill="gold">:hover </text>  
+
+	<path id="heart"
+	d="M 565,393 L582,377 L584,370 L575,360 L565,370 L555,360 L546,370 L548,377 L 565,393 z" 	stroke="#006686" stroke-width="5" fill="lightblue"
+	stroke-linecap="round" stroke-linejoin="round"/>
+<!--	<polygon points="565,393 582,377 584,370 575,360 565,370 555,360 546,370 548,377" fill="none" -->
+	
+     </path>
+
+  <path id="cloud" d='M 25,60 
+           a 20,20 1 0,0 0,40 
+           h 50 
+           a 20,20 1 0,0 0,-40 
+           a 10,10 1 0,0 -15,-10 
+           a 15,15 1 0,0 -35,10  
+		z'  fill="rgba(255,255,255,0.5)"/> </g>
+</svg>
+	</div>
+	<!--
+<g id="cloud-fa" fill="rgba(255,255,255,0.5">
+	<circle r="10" cx="100" cy="100" />
+	<circle r="15" cx="113" cy="95" />
+	<circle r="10" cx="130" cy="100" />
+</g>
+<g id="cloud-sl">
+	<circle r="10" cx="300" cy="150" fill="rgba(255,255,255,0.5)" />
+	<circle r="15" cx="313" cy="145" fill="rgba(255,255,255,0.5)" />
+	<circle r="10" cx="330" cy="150" fill="rgba(255,255,255,0.5)" />
+</g>
+<g id="cloud-big">
+	<circle r="15" cx="500" cy="120" fill="rgba(255,255,255,0.5)" />
+	<circle r="20" cx="520" cy="115" fill="rgba(255,255,255,0.5)" />
+	<circle r="15" cx="540" cy="120" fill="rgba(255,255,255,0.5)" />
+</g>
+-->
+	<div id="vitas">
+		<p>SVG не работает и по этому поводу песня:</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/-x_WVQllXoA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	
+	<script>
+</script>
+
+
+</body>
+
+</html>
