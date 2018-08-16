@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
 	<meta charset="UTF-8">
@@ -159,7 +159,7 @@
 </head>
 
 <body>
-	<button type="button" id="crash">Кнопка, чтобы всё сломать</button> и которая сейчас не работает<br/>
+	<button type="button" id="crash">Кнопка, чтобы всё сломать</button>Кстати, норм работает<br/>
 	<div id="svg-div"><svg width="600" height="450">
 	<rect id="sky" width="100%" height="400" fill="skyblue"/>
 	<rect width="100%" height="50" y="400" fill="#006686"/>
@@ -222,9 +222,25 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/-x_WVQllXoA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 	
-	<script>
-</script>
+<script>
+	function  piu(){
+		document.getElementById('html').classList.remove("svg");};
+	
+	function hate(){
+		document.getElementById('html').classList.add("no-svg");
+	};
 
+	crash.onclick = function crashAll() {
+		
+		if (Modernizr.svg) {
+
+			piu();
+hate();
+
+		}
+		};
+
+</script>
 
 </body>
 
